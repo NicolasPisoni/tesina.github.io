@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turismo Jesús María</title>
+  <link rel="icon" href="Imagenes/Logo municipalidad.png" type="image/png">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <img src="Imagenes/Municipalidad Jesus Maria.PNG" alt="Logo Jesús María">
+    <ul>
+      <li><a onclick="scrollToContact()">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección con dos imágenes -->
+  <section class="hero">
+    <div onclick="window.location.href='cespedes.html'">
+      <img src="Imagenes/Imagen1.jpg" alt="Torre Cespedes">
+      <h2>Torre Cespedes</h2>
+    </div>
+    <div onclick="window.location.href='luisbiondi.html'">
+      <img src="Imagenes/Luis Biondi.jpeg" alt="Luis Biondi">
+      <h2>Luis Biondi</h2>
+    </div>
+  </section>
+
+  <!-- Sección de contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p><strong>Oficina de Turismo</strong></p>
+        <p><strong>Jesús María</strong></p>
+        <p>📞 03525-443760</p>
+        <p>📱 3525539014</p>
+        <p>📧 turismo.munjm@gmail.com</p>
+        <p>📍 C. J Kennedy, X5220 Jesús María, Córdoba</p>
+        <div class="social">
+          <a href="https://www.facebook.com/jesusmariaturismo/">🌐 Facebook</a>
+          <a href="https://www.instagram.com/turismojesusmaria/">📸 Instagram</a>
+          <a href="https://api.whatsapp.com/send?phone=5493525539014&text=Hola!%20gracias%20por%20contactarnos%2C%20estamos%20de%2010%20a%2017%20de%20lunes%20a%20viernes%2C%20fin%20de%20semana%20y%20feriados%20de%209%3A30%20a%2020">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-map">
+        <img class="map" src="Imagenes/Mapa.PNG" alt="pin" class="map-pin">
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Barra de navegación */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f15a24;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Sección principal con imágenes */
+    .hero {
+      display: flex;
+      height: 100vh;
+    }
+
+    .hero div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(70%);
+      transition: 0.5s;
+    }
+
+    .hero div:hover img {
+      filter: brightness(50%);
+      transform: scale(1.05);
+    }
+
+    .hero h2 {
+      position: absolute;
+      color: white;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    /* Contacto */
+    #contacto {
+      padding: 50px 20px;
+      background-color: #f9f9f9;
+    }
+
+    #contacto h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f15a24;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+    .contact-map {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
+    .social a {
+      margin-right: 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .map{
+      width: 100%;
+      height: 100%
+    }
+  </style>
+  <script>
+    function scrollToContact() {
+      document.getElementById("contacto").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
